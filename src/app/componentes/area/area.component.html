@@ -1,0 +1,16 @@
+<div id="bloque">
+  <div>
+    <input type="text" name="" id="" [(ngModel)]="base">
+    <input type="text" name="" id="" [(ngModel)]="altura">
+  </div>
+  <div>
+    <button type="button" class="btn btn-primary" (click)="calcularArea()">Area_Perimetro</button>
+  </div>
+  <div>
+    <div *ngIf="show">
+      Resultado: {{resultado}}
+    </div>
+  </div>
+</div>
+
+<br>

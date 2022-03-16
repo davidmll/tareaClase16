@@ -1,0 +1,38 @@
+<div id="bloque" class="container">
+  <div>
+    <input
+      type="text"
+      name="presupuesto"
+      id="presupuesto"
+      [(ngModel)]="presupuesto"
+    />
+  </div>
+  <div>
+    <button
+      type="button"
+      class="btn btn-danger"
+      (click)="calcularPresupuesto()"
+    >
+      Reparto
+    </button>
+  </div>
+</div>
+
+<div class="container mt-4" *ngIf="show">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Pediatria</th>
+        <th>Urgencias</th>
+        <th>Traumatologia</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ pediatria }}€</td>
+        <td>{{ urgencias }}€</td>
+        <td>{{ traumatologia }}€</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

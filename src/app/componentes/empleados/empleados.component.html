@@ -1,0 +1,53 @@
+<div id="bloque">
+  <form  id="bloque" (ngSubmit)="saveEmpleado()">
+    <div>
+      <input type="text" name="nombre" id="nombre" [(ngModel)]="nuevo.nombre" />
+      <input
+        type="text"
+        name="salario"
+        id="salario"
+        [(ngModel)]="nuevo.salario"
+      />
+    </div>
+
+    <div>
+      <button class="btn btn-info">Agregar</button>
+    </div>
+  </form>
+</div>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Salario</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emple of coleccionEmpleado">
+        <td><li>{{ emple.nombre }}</li></td>
+        <td> <li>{{ emple.salario }}</li></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<button id="calcular" type="button" class="btn btn-warning text-white"  *ngIf="show" (click)="salarioMayor()">Calcular</button>
+
+<div class="container mt-4" *ngIf="block">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Salario</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emple of EmpleadoMayorSalario">
+        <td><li>{{ emple.nombre }}</li></td>
+        <td> <li>{{ emple.salario }}</li></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

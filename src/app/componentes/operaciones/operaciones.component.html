@@ -1,0 +1,19 @@
+
+<div id="bloque">
+  <div>
+    <input type="text" name="" id="" [(ngModel)]="num1">
+    <input type="text" name="" id="" [(ngModel)]="num2">
+  </div>
+  <div>
+    <button type="button" class="btn btn-primary" (click)="calcularSuma()">+</button>
+    <button type="button" class="btn btn-success" (click)="calcularResta()">-</button>
+    <button type="button" class="btn btn-danger"  (click)="calcularMultiplicacion()">X</button>
+    <button type="button" class="btn btn-warning text-white" (click)="calcularDivision()">/</button>
+  </div>
+  <div>
+    <div *ngIf="show">Resultado: {{resultado}}</div>
+  </div>
+</div>
+
+<br>
+
